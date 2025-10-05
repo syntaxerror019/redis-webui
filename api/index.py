@@ -27,7 +27,7 @@ def index():
         ssl = session['ssl']
 
         try:
-            r = redis.Redis(host=host, port=port, password=password, decode_responses=True, ssl=ssl)
+            r = redis.Redis(host=host, port=port, password=password, decode_responses=True, ssl=ssl, socket_timeout=10)
             info = r.info()
             
             start_index = (page - 1) * PAGE_SIZE
@@ -47,6 +47,7 @@ def index():
             
             return render_template("dashboard.html", keys=data, info=info, page=page, total_pages=total_pages)
         except Exception as e:
+            session.clear()
             return render_template("index.html", error=str(e))
     else:
         return render_template("index.html")

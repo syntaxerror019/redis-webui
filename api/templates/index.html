@@ -39,7 +39,7 @@
       <h3 class="mb-3 text-center">Connect to Redis</h3>
 
       {% if error %}
-      <div class="alert alert-danger" role="alert">
+      <div id="errorBox" class="alert alert-danger" role="alert">
         <i class="bi bi-exclamation-triangle-fill"></i>
         {{ error }}
       </div>
@@ -76,7 +76,7 @@
           </div>
 
           <div class="col-12">
-            <button type="submit" class="btn btn-primary w-100">
+            <button type="submit" id="connectBtn" class="btn btn-primary w-100">
               <i class="bi bi-plug"></i> Connect
             </button>
           </div>
@@ -169,6 +169,14 @@
         el.innerHTML = '<i class="bi bi-unlock-fill text-warning"></i> Not encrypted';
         el.classList.add('text-muted');
       }
+    }
+
+    document.querySelector('form').onsubmit = function(e){
+        const btn = document.querySelector('button[type="submit"]');
+        const errorBox = document.getElementById('errorBox');
+        if(errorBox) errorBox.style.display = 'none';
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Connecting...';
     }
     // init
     toggleLock();

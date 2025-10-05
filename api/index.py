@@ -26,12 +26,6 @@ def index():
         password = session['password']
         ssl = session['ssl']
 
-        # For testing you can override
-        host="countapi.sntx.dev"
-        port=6380
-        password="13789-68a87579-aeb8-8326-9e20-7a6750e281c9"
-        ssl=True
-
         try:
             r = redis.Redis(host=host, port=port, password=password, decode_responses=True, ssl=ssl)
             info = r.info()

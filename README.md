@@ -17,6 +17,8 @@ Redis WebUI is a lightweight, open-source web interface to **inspect, monitor, a
 
 Perfect for **local development** or securely connecting to remote Redis servers.
 
+### Don't want to host? Use ours [redis.mileshilliard.com](https://redis.mileshilliard.com) 
+
 ---
 
 ## Features

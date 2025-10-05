@@ -1,9 +1,10 @@
 from flask import Flask, request, render_template, session, redirect, url_for
 import redis
 import math
+from config import load_secret_key, load_config
 
 app = Flask(__name__)
-app.secret_key = 'supasecret'
+app.secret_key = load_secret_key()
 PAGE_SIZE = 50
 
 @app.route("/", methods=["GET", "POST"])

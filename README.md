@@ -1,6 +1,6 @@
 # Redis WebUI
 
-![Redis WebUI Screenshot](screenshot.png)  
+![Redis WebUI Screenshot](/images/screenshot.png)  
 *A sleek, Bootstrap-powered web interface for monitoring and managing your Redis instances.*
 
 ---
@@ -34,7 +34,7 @@ Perfect for **local development** or securely connecting to remote Redis servers
 
 ## Screenshot
 
-![Dashboard Screenshot](dashboard-screenshot.png)
+![Dashboard Screenshot](/images/dashboard.png)
 
 ---
 
@@ -51,7 +51,7 @@ Perfect for **local development** or securely connecting to remote Redis servers
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/redis-webui.git
+git clone https://github.com/syntaxerror019/redis-webui.git
 cd redis-webui
 ```
 
@@ -61,10 +61,10 @@ cd redis-webui
 pip install -r requirements.txt
 ```
 
-3. Run the app"
+3. Run the app
 
 ```bash
-python app.py
+python index.py
 ```
 
 4. Open your browser at:

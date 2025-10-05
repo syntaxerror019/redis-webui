@@ -1,28 +1,74 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# Redis WebUI
 
-# Flask + Vercel
+![Redis WebUI Screenshot](screenshot.png)  
+*A sleek, Bootstrap-powered web interface for monitoring and managing your Redis instances.*
 
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+---
 
-## Demo
+## Overview
 
-https://flask-python-template.vercel.app/
+Redis WebUI is a lightweight, open-source web interface to **inspect, monitor, and interact with Redis databases**. It’s designed for convenience, security, and usability:
 
-## How it Works
+- Modern Bootstrap 5 design
+- Responsive cards, tables, and progress bars
+- Key pagination for large databases
+- Session-based credential storage (never persisted to disk)
+- CPU, memory, uptime, and command stats at a glance
 
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
+Perfect for **local development** or securely connecting to remote Redis servers.
 
-## Running Locally
+---
+
+## Features
+
+- **Memory Usage**: Visual progress bar and human-readable stats
+- **CPU & Commands**: Track CPU time and total commands processed
+- **Uptime & Clients**: See how long your Redis instance has been running and active connections
+- **Database Stats**: Keys, expiration counts, average TTL per DB
+- **Paginated Keys List**: Avoid loading thousands of keys at once
+- **Connect / Switch Servers**: Easily log out or connect to a different Redis instance
+- **SSL/TLS Support**: Optional encryption for remote connections
+- **Open Source & Transparent**: Inspect the code and know exactly what happens with your credentials
+
+---
+
+## Screenshot
+
+![Dashboard Screenshot](dashboard-screenshot.png)
+
+---
+
+## Running it locally
+
+### Prerequisites
+
+- Python 3.9+
+- Redis server to connect to
+- `pip` package manager
+
+### Installation
+
+1. Clone this repository:
 
 ```bash
-npm i -g vercel
-vercel dev
+git clone https://github.com/your-username/redis-webui.git
+cd redis-webui
 ```
 
-Your Flask application is now available at `http://localhost:3000`.
+2. Install dependencies:
 
-## One-Click Deploy
+```bash
+pip install -r requirements.txt
+```
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+3. Run the app"
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+```bash
+python app.py
+```
+
+4. Open your browser at:
+
+```
+http://127.0.0.1:5000
+```

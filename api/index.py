@@ -3,7 +3,7 @@ import redis
 import math
 
 app = Flask(__name__)
-app.secret_key = "milessecret17389"  # needed for session
+app.secret_key = 'supasecret'
 PAGE_SIZE = 50
 
 @app.route("/", methods=["GET", "POST"])

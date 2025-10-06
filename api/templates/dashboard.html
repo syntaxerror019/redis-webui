@@ -97,7 +97,7 @@
           {% for db, stats in info.items() if db.startswith('db') %}
           <tr>
             <td>{{ db }}</td>
-            <td>{{ stats.keys }}</td>
+            <td>{{ total_keys }}</td>
             <td>{{ stats.expires }}</td>
             <td>{{ stats.avg_ttl }}</td>
           </tr>

@@ -68,7 +68,7 @@ def index():
             total_keys = info.get('db0', {}).get('keys', len(keys))
             total_pages = math.ceil(total_keys / PAGE_SIZE)
             
-            return render_template("dashboard.html", keys=data, info=info, page=page, total_pages=total_pages)
+            return render_template("dashboard.html", keys=data, total_keys=total_keys, info=info, page=page, total_pages=total_pages)
         except Exception as e:
             session.clear()
             return render_template("index.html", error=str(e))

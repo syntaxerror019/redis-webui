@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template, session, redirect, url_for
 import redis
 import math
-from config import load_secret_key, load_config
+from .config import load_secret_key, load_config
 
 app = Flask(__name__)
 app.secret_key = load_secret_key()

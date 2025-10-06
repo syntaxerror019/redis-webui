@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def load_secret_key():
+def load_secret_key():    
     return os.getenv('SECRET_KEY')
 
 def load_config():
